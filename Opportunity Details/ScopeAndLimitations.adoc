@@ -1,0 +1,10 @@
+== Scope
+
+
+
+== Limitations
+
+. Proposal to the solution should be cost-effective.
+. Solution should be inline with the existing ecosystem built for https://github.com/ldynia/archcolider[Farmacy Foods].
+. AWS is the preferred cloud provider.
+. Farmacy Family should use Farmacy Foods' idetnity management.

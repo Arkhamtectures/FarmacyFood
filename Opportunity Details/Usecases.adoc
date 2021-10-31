@@ -1,40 +1,57 @@
 
 |===
-|Usecase |Actor |Goal Description
+|Usecase |Actor |Module  |Goal Description
 
 
-|Create Profile |Actor |Goal Description
-|Preference personalization |engagedCustomer | To share information with medical service providers and dietitians. And how much profile information they want to allow the community to see.
-|Provide dietary needs |engagedCustomer |Goal Description
-|Create Forums |Admin | To improve the community engagement.
-|Modify Forums |Admin | To improve the community engagement.
-|Subscribe to Forum | transactionCustomer, engagedCustomer |
-|Unsubscribe to Forum | engagedCustomer |
-|Delete Forums |Admin | To improve the community engagement.
+|Create Profile |Actor | |Goal Description
+|Preference personalization |engagedCustomer | | To share information with medical service providers and dietitians. And how much profile information they want to allow the community to see.
+|Provide dietary needs |engagedCustomer | |Goal Description
+|Create Forums |Admin | |To improve the community engagement.
+|Modify Forums |Admin|  | To improve the community engagement.
+|Subscribe to Forum | transactionCustomer, engagedCustomer|  |
+|Unsubscribe to Forum | engagedCustomer|  |
+|Delete Forums |Admin |  | To improve the community engagement.
 
-|Create Blogpost |Dietitian, Clinician |Goal Description
-|Modify Blogpost |Dietitian, Clinician |Goal Description
-|Delete Blogpost |Dietitian, Clinician |Goal Description
+|Create Blogpost |Dietitian, Clinician | |Goal Description
+|Modify Blogpost |Dietitian, Clinician | |Goal Description
+|Delete Blogpost |Dietitian, Clinician | |Goal Description
 
-|Create Events |Dietitian, Clinician |To improve the community engagement and awareness.
-|Create Classes |Dietitian, Clinician |To improve the community engagement and overall wellness.
-|Modify Classes |Dietitian, Clinician |To improve the community engagement and overall wellness.
-|Delete Classes |Dietitian, Clinician |To improve the community engagement and overall wellness.
-|Enroll to Events and classes |engagedCustomer |To improve one's wellness.
-|Cancel event or class enrolment |engagedCustomer |To improve one's wellness.
+|Create Events |Dietitian, Clinician | |To improve the community engagement and awareness.
+|Create Classes |Dietitian, Clinician| |To improve the community engagement and overall wellness.
+|Modify Classes |Dietitian, Clinician | |To improve the community engagement and overall wellness.
+|Delete Classes |Dietitian, Clinician | |To improve the community engagement and overall wellness.
+|Enroll to Events and classes |engagedCustomer | |To improve one's wellness.
+|Cancel event or class enrolment |engagedCustomer|  |To improve one's wellness.
 
-|Provide generic advice | Dietitian |
-|Access to customer medical information | Dietitian, Clinician |
-|Send message | Dietitian, engagedCustomer | To advice customers on their diet
-|Receive message | Dietitian, engagedCustomer | To advice customers on their diet
-
-| Send onboarding email to Transactional Customer | System |
-| Conduct test every 3 months | Clinician |
-| Analyze results | Clinician |
-| Take a test every 3 months | engagedCustomer |
-
-
-| Support geographical trend analysis | ?? |
-| Tagging food to dietary choices | System | To improve the distribution and potential food waste from having the wrong mix of foods in a particular fridge.
-| Rank dietary choices by Farmacy Food Fridge | System | To make a more informed food mix by dietary choices of the community
+|Provide generic advice | Dietitian|  |
+|Access to customer medical information | Dietitian, Clinician|  |
+|Send message | Dietitian, engagedCustomer|  | To advice customers on their diet
+|Receive message | Dietitian, engagedCustomer|  | To advice customers on their diet
+| Send onboarding email to Transactional Customer | System|  |
+| Conduct test every 3 months | Clinician|  |
+| Analyze results | Clinician|  |
+| Take a test every 3 months | engagedCustomer|  |
+| Support geographical trend analysis | ??|  |
+| Tagging food to dietary choices | System|  | To improve the distribution and potential food waste from having the wrong mix of foods in a particular fridge.
+| Rank dietary choices by Farmacy Food Fridge | System|  | To make a more informed food mix by dietary choices of the community
+|         | | Customer Profile |Customer profile should be shared between Farmacy Foods and Family. This is an integration point. Customer Profile should show information such transaction history with Farmacy Foods.
+|         | | Customer Profile |Customer should be able to turn on Farmacy Family from the profile. Likewise, they should also be allowed to turn-off if they wish to leave Farmacy Family
+|         | | Customer Profile |Customer should be able to manage a customer profile<br /> i.e. create, update, delete
+|         | | Customer Profile |Customer should be able to update which parts of the profile are public and which ones are hidden
+|         | | Customer Profile |Customer should be able to select / edit topics of interest<br /> for e.g. vegan, weight loss, etc.
+|         | | Customer Profile |Customer should be able set preferences around dietary needs - such as vegan, gluten-free, allergies, etc.
+|         | | Customer Profile |Customer Profile should display which forums the user is part of allowing him to review, edit and navigate to the forum
+|         | | Customer Profile |Customer Profile should include information on upcoming classes the user has signed-up for
+|         | | Customer Profile |Customer Profile should include information on past classes attended
+|         | | Customer Profile |Customer Profile should include bookmarks created by customer to videos, articles, other reference media
+|         | | Customrr Profile |Customer profile should have zipcode - which will be used to filter all resources and events in the community that needs to localized
+|         | | Analytics        |System should capture data around customer's dietary needs - vegan, gluten-free, etc.
+|         | | Analytics        |System should capture categories (tags) of classes or events registered and/or attended by a customer
+|         | | Analytics        |System should capture categories (tags) of videos viewed by a customer
+|         | | Analytics        |System should capture categories (tags)  of resources accessed by a customer
+|         | | Analytics        |System should capture categories (tags)  of forums and posts that the customer was active on
+|         | | Analytics        |System should capture categories (tags)  of forums and posts that the customer was active on
+|         | | Analytics        |System should extract keywords from notes saved from interaction between dietitian and customer
+|         | | Analytics        |System should extract keywords from clinical test results notes
+|         | | Analytics        |
 |===
