@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+package "UI Group" {
+  [Existing FFoods React UI]
+  [User Preferences React UI]
+  [Content UI]
+}
+
+node "Content-Management-Group" {
+  [Content-Delivery-Edge-Cache]
+  [Content-Creation-Service]
+  [Media-Transcoding-Service]
+  [Content-Storage]
+}
+
+node "User-Management-Group" {
+    [User-Profile-Management-Service]
+
+}
+node "Core-Service-Group" {
+
+  [Social-Media-Category-Management-Service]
+  [Data-Dictionary-Service]
+
+}
+
+node "Data-Mining-Group" {
+    [Data-transformation-Services]
+    [Data-grouping-Services]
+    [Data-Collection-Services]
+    [Analyzed-Data-Storage]
+}
+
+[User Preferences React UI] -down-> [User-Profile-Management-Service]
+[User-Profile-Management-Service] -down-> [Social-Media-Category-Management-Service]
+[Content UI] <-down- [Content-Delivery-Edge-Cache]
+[Content UI] -down-> [Content-Creation-Service]
+[Content-Delivery-Edge-Cache] -down-> [Content-Creation-Service]
+[Content-Delivery-Edge-Cache] -down-> [Content-Storage]
+[Content-Creation-Service] -> [Media-Transcoding-Service]
+[Media-Transcoding-Service] -> [Content-Storage]
+[Social-Media-Category-Management-Service] -> [Data-Dictionary-Service]
+
+[Data-transformation-Services] -right->[Data-grouping-Services]
+[Data-grouping-Services] -down-> [Data-Collection-Services]
+[Data-Collection-Services] -left-> [Analyzed-Data-Storage]
+
+@enduml
