@@ -46,9 +46,11 @@ This is another paragraph.footnote:[I am footnote text and will be displayed at 
 * Farmacy Family has relationships with third party providers (clinics, doctors, etc) that have access to more analytical data to improve engagement (for example, regional dietary observations).
 * Add Farmacy Family user interface to existing Foods interface, which is currently a Reactive monolith. Create a holistic UX for both food and Farmacy Family to support engagement model.
 
-include::Opportunity Details/Technical_Details.adoc[leveloffset=+2]
+include::OpportunityDetails/Readme.adoc[leveloffset=+2]
 
 plantuml::diagrams/farmacyFamily-usecases.puml[formate=svg]
+
+//include::Solution/Readme.adoc[leveloffset=+2]
 
 .Example block title
 ====

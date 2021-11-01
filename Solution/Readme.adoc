@@ -1,0 +1,4 @@
+= Solution Overview
+
+
+plantuml::../diagrams/farmacyFamily-component-diagram.puml[formate=svg]

@@ -1,0 +1,5 @@
+= Opportunity Details
+
+include::Technical_Details.adoc[leveloffset=+2]
+include::ScopeAndLimitations.adoc[leveloffset=+2]
+include::Usecases.adoc[leveloffset=+2]
