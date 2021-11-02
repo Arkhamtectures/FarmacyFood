@@ -1,4 +1,4 @@
-# 001 Analytics System Approach
+# 002 Event Bus copy
 
 Date: 2021-11-01
 
@@ -8,18 +8,18 @@ Proposed
 
 ## Context
 
-The analytics sub-system requires a reliable and scalable event bus that also enables full de-coupling of event producers and consumers. 
+The analytics sub-system requires a reliable and scalable event bus that also enables full de-coupling of event producers and consumers.
 
 ## Decision
 
-We will go with AWS EventBridge 
+We will go with AWS EventBridge for the event bus in the analytics sub-system architecture. 
 
 ## Consequences
 
-**Positive:** Other sub-systems need not concern with analytic needs. Adding new sub-systems or interaction types will be easier
+**Positive:** Serverless, Implicit scalability, Routing enables complete decoupling of producers and consumers. Pricing is $1.00 per million events per month. Assuming 10 million events, the cost will only be $10 per month
 
 **Negative:**
 
-**Risks:** Development team needs to be experienced with designing and developing event driven system
+**Risks:** 
 
-**Bonus Features:** If any
+**Bonus Features:**
