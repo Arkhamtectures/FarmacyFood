@@ -1,6 +1,6 @@
 @startuml
 'https://plantuml.com/component-diagram
-
+skinparam componentStyle rectangle
 
 package "UI Group" {
   [Existing FFoods React UI]
@@ -19,10 +19,17 @@ node "User-Management-Group" {
     [User-Profile-Management-Service]
 
 }
+
+node "Community-Engagement-Group" {
+    [Community-Management-Service]
+    [Scheduling-Service]
+}
+
 node "Core-Service-Group" {
 
   [Social-Media-Category-Management-Service]
   [Data-Dictionary-Service]
+  [Message-Stream]
 
 }
 
@@ -43,8 +50,15 @@ node "Data-Mining-Group" {
 [Media-Transcoding-Service] -> [Content-Storage]
 [Social-Media-Category-Management-Service] -> [Data-Dictionary-Service]
 
-[Data-transformation-Services] -right->[Data-grouping-Services]
-[Data-grouping-Services] -down-> [Data-Collection-Services]
-[Data-Collection-Services] -left-> [Analyzed-Data-Storage]
+[Community-Management-Service] -> [User-Profile-Management-Service]
+[Community-Management-Service] -> [Social-Media-Category-Management-Service]
+[Community-Management-Service] -> [Scheduling-Service]
 
+[Data-transformation-Services] -down->[Data-grouping-Services]
+[Data-grouping-Services] -left-> [Data-Collection-Services]
+[Data-Collection-Services] -up-> [Analyzed-Data-Storage]
+
+[User-Profile-Management-Service] <-> [Message-Stream]
+[Data-transformation-Services] <-up- [Message-Stream]
+[Analyzed-Data-Storage] -up-> [Message-Stream]
 @enduml
