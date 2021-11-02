@@ -1,4 +1,4 @@
-# 002 Event Bus copy
+# 002 Event Bus
 
 Date: 2021-11-01
 
