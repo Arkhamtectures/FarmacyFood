@@ -1,5 +1,4 @@
-@startuml
-'https://plantuml.com/use-case-diagram
+
 
 skinparam actorStyle awesome
 
@@ -41,5 +40,3 @@ engagedCustomer -> preferencePersonalization
 engagedCustomer -> provideDietaryNeeds
 
 System -> (Send onboarding email to Transactional Customer)
-
-@enduml

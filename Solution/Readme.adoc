@@ -2,6 +2,6 @@
 
 
 [plantuml, format="svg", id="component-diagram"]
-----
-include::../diagrams/farmacyFamily-component-diagram.puml[formate=svg]
-----
+....
+include::../diagrams/farmacyFamily-component-diagram.puml[]
+....
