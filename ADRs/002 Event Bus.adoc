@@ -1,0 +1,25 @@
+= 002 Event Bus copy
+
+Date: 2021-11-01
+
+== Status
+
+Proposed
+
+== Context
+
+The analytics sub-system requires a reliable and scalable event bus that also enables full de-coupling of event producers and consumers.
+
+== Decision
+
+We will go with AWS EventBridge for the event bus in the analytics sub-system architecture to be inline with existing cloud provider preferences.
+
+== Consequences
+
+*Positive:* Serverless, Implicit scalability, Routing enables complete decoupling of producers and consumers. Pricing is $1.00 per million events per month. Assuming 10 million events, the cost will only be $10 per month
+
+*Negative:*
+
+*Risks:* 
+
+*Bonus Features:*
