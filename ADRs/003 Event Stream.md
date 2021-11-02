@@ -1,0 +1,25 @@
+# 003 Event Stream
+
+Date: 2021-11-01
+
+## Status
+
+Proposed
+
+## Context
+
+The analytics sub-system requires a reliable and scalable event stream that enables batching of events before they are processed. Events from EventBridge can be delivered to a target like AWS Lambda function one at a time. Without batching, the costs will be huge. 
+
+## Decision
+
+We will go with AWS Kinesis Stream for event streams in the analytics sub-system architecture. There will be 2 event stream to begin with - one for analytics and one for notification. 
+
+## Consequences
+
+**Positive:** Events can be batched which will drive down costs. Event can be batch by partition-key (which can be the event type or customer id). We can have back-pressure in the streams to control how to balance speed vs cost. 
+
+**Negative:**
+
+**Risks:** 
+
+**Bonus Features:** 
