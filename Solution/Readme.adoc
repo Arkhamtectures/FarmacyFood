@@ -1,4 +1,7 @@
 = Solution Overview
 
 
-plantuml::../diagrams/farmacyFamily-component-diagram.puml[formate=svg]
+[plantuml, format="png", id="component-diagram"]
+----
+include::../diagrams/farmacyFamily-component-diagram.puml[formate=svg]
+----

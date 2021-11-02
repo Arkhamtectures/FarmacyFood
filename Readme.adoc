@@ -45,7 +45,8 @@ Thus, the overall goal of Farmacy Family is to connect, gather, analyze, and com
 * Add Farmacy Family user interface to existing Foods interface, which is currently a Reactive monolith. Create a holistic UX for both food and Farmacy Family to support engagement model.
 
 include::OpportunityDetails/Readme.adoc[leveloffset=+2]
-
-plantuml::diagrams/farmacyFamily-usecases.puml[formate=svg]
-
-//include::Solution/Readme.adoc[leveloffset=+2]
+[plantuml, format="png", id="usecases"]
+----
+include::diagrams/farmacyFamily-usecases.puml[svg]
+----
+include::Solution/Readme.adoc[leveloffset=+2]
