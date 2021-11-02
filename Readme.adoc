@@ -47,8 +47,8 @@ Thus, the overall goal of Farmacy Family is to connect, gather, analyze, and com
 include::OpportunityDetails/Readme.adoc[leveloffset=+2]
 
 [plantuml, format="svg", id="usecases"]
-....
-include::diagrams/farmacyFamily-usecases.puml[]
-....
+----
+include::diagrams/farmacyFamily-usecases.puml[formate=svg]
+----
 
 include::Solution/Readme.adoc[leveloffset=+2]
