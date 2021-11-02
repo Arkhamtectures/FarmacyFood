@@ -19,7 +19,7 @@ When a transactional customer purchases a meal, Farmacy Family will generate an 
 
 Thus, the overall goal of Farmacy Family is to connect, gather, analyze, and communicate.
 
-=== Definitions
+== Definitions
 
 [#transactional-customer]
 . Transactional Customer: Customer of FFoods
@@ -31,8 +31,6 @@ Thus, the overall goal of Farmacy Family is to connect, gather, analyze, and com
 . Client: low income, poverty level, homeless, college students, educators, senior citizens
 [#community]
 . Community - small group of <<engaged-customer, engaged customers>> within a neighborhood area
-
-This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
 
 == Requirements
 
@@ -51,4 +49,3 @@ include::OpportunityDetails/Readme.adoc[leveloffset=+2]
 plantuml::diagrams/farmacyFamily-usecases.puml[formate=svg]
 
 //include::Solution/Readme.adoc[leveloffset=+2]
-
