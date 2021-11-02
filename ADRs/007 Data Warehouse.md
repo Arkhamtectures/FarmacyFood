@@ -1,0 +1,32 @@
+# 007 Data Warehouse
+
+Date: 2021-11-01
+
+## Status
+
+Proposed
+
+## Context
+
+The analytics subsystem requires a efficient and scalable data warehouse for ad-hoc querying, support data needs for other services (for notification) and business intelligence
+
+## Decision
+
+We will go with Amazon Redshift for the warehouse solution 
+ 
+
+## Consequences
+
+**Positive:**  
+1. Can easily handle large volumes of data 
+2. capable of processing both structured and non-structured data 
+3. Easy deployment 
+4. 
+
+**Negative:**
+
+**Risks:** 
+
+**Bonus Features:** 
+1. Works well with rest of the services in AWS
+2. Plenty of analytics tools and services 
