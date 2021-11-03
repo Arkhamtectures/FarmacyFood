@@ -19,13 +19,14 @@ Package Professionals {
 actor Dietitian
 actor Clinician
 }
-transactionCustomer --> (Create Profile)
+
+transactionalCustomer --> (Create Profile)
 Admin --> (Create Profile)
 engagedCustomer --> (Preference personalization)
 engagedCustomer --> (Provide dietary needs)
 Admin --> (Create Forums)
 Admin --> (Modify Forums)
-transactionCustomer --> (Subscribe to Forum)
+transactionalCustomer --> (Subscribe to Forum)
 engagedCustomer --> (Subscribe to Forum)
 engagedCustomer --> (Unsubscribe to Forum)
 Admin --> (Delete Forums)
