@@ -56,7 +56,9 @@ This is the storage service like AWS S3 where documents, videos and images are s
 
 . User-Management-Group
 .. User-Profile-Management-Service
+
 . Community-Engagement-Group
+.. React based Community Engagement UI
 .. Community-Management-Service
 .. Scheduling-Service
 
