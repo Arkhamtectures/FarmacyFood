@@ -1,0 +1,60 @@
+= Solution Overview
+
+The proposed solution consists of multiple quanta addressing a specific need. Below are the list that we identified fo the given scope.
+
+. User's profile/preference management group (Chosen service-based architecture)
+. Community Engagement group (Chosen Orchestrator driven service-based architecture)
+. Analytics
+.. This group will be completely choreography based distributed architecture to support elasticity and scalability.
+. Content management for blogs and forums (Chosen modularized monolith or a service-based architecture)
+. Core or shared services
+
+[plantuml, format="svg", id="component-diagram"]
+----
+include::../diagrams/farmacyFamily-component-diagram.puml[formate=svg]
+----
+
+
+. Content-Management-Group
+.. React based Content UI
+====
+    This react based web application serves as a micro-frontent in combination with existing FFoods UI served under same domain. This will support the User interaction for the community members through blogs, forums and more.
+====
+.. Content-Delivery-Edge-Cache
+.. Content-Creation-Service
+====
+    This service interacts with existing User profile service to authorize and migrate an existing transactional customer to engaged customer. This service provides required support to capture user preferences in the overall engagement, data privacy and channels to interact through subscription. This service also takes care of working with Transcoding Service to store and link media to content pages. Persist this content and retrieve it on demand.
+====
+.. Media-Transcoding-Service
+====
+    This service takes care of transcoding videos and images.
+====
+.. Content-Storage
+====
+This is the storage service like AWS S3 where documents, videos and images are stored.
+====
+
+
+. User-Management-Group
+.. User-Profile-Management-Service
+. Community-Engagement-Group
+.. Community-Management-Service
+.. Scheduling-Service
+
+
+. Core-Service-Group
+.. Social-Media-Category-Management-Service
+.. Data-Dictionary-Service
+====
+This service maintains the verbatim for the entire platform so all the services talk same language regarding the dietary categories and more.
+====
+.. Message-Stream
+====
+This is service is to support the asynchronous communication which in our case can be AWS Kinesis or SNS or even Kafka.
+====
+
+. Data-Mining-Group
+.. Data-transformation-Services
+.. Data-grouping-Services
+.. Data-Collection-Services
+.. Analyzed-Data-Storage

@@ -1,7 +1,3 @@
-= Solution Overview
 
 
-[plantuml, format="svg", id="component-diagram"]
-----
-include::../diagrams/farmacyFamily-component-diagram.puml[formate=svg]
-----
+include::SolutionOverview.adoc
