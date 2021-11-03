@@ -60,7 +60,14 @@ This is the storage service like AWS S3 where documents, videos and images are s
 . Community-Engagement-Group
 .. React based Community Engagement UI
 .. Community-Management-Service
+====
+This component takes care of engaging the community with professionals based on privacy choices.
+Managing wellness programs for community based on analytics data, customer preferences and subscriptions to social media topics and categories.
+====
 .. Scheduling-Service
+====
+This component takes care of triggering scheduled activities ranging from timely health checks, reminders for subscribed events by working with notification services of FFoods.
+====
 
 
 . Core-Service-Group
