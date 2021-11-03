@@ -33,16 +33,20 @@ image:../diagrams/farmacyFamily-component-diagram.png[]
 . Content-Management-Group
 .. React based Content UI
 ====
-    This react based web application serves as a micro-frontent in combination with existing FFoods UI served under same domain. This will support the User interaction for the community members through blogs, forums and more.
+This React based web application serves as a micro-frontend in combination with existing FFoods UI served under same domain.
+This will support the User interaction for the community members through blogs, forums and more.
 ====
 .. Content-Delivery-Edge-Cache
 .. Content-Creation-Service
 ====
-    This service interacts with existing User profile service to authorize and migrate an existing transactional customer to engaged customer. This service provides required support to capture user preferences in the overall engagement, data privacy and channels to interact through subscription. This service also takes care of working with Transcoding Service to store and link media to content pages. Persist this content and retrieve it on demand.
+This service interacts with existing User profile service to authorize and migrate an existing transactional customer to engaged customer.
+This service provides required support to capture user preferences in the overall engagement, data privacy and channels to interact through subscription.
+This service also takes care of working with Transcoding Service to store and link media to content pages.
+Then persist this content and retrieve it on demand.
 ====
 .. Media-Transcoding-Service
 ====
-    This service takes care of transcoding videos and images.
+This service takes care of transcoding videos and images.
 ====
 .. Content-Storage
 ====
