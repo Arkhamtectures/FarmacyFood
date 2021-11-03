@@ -2,44 +2,62 @@
 'https://plantuml.com/use-case-diagram
 
 skinparam actorStyle awesome
+left to right direction
 
-:Transactional Customer: as transactionalCustomer
-:Client:
-:Engaged Customer: as engagedCustomer
-:Support Community: as supportCommunity
-(Create Profile) as createProfile
-(Preference personalization) as preferencePersonalization
-(Provide dietary needs) as provideDietaryNeeds
+Package Customer {
+actor "Transactional Customer"  as transactionalCustomer
+actor "Engaged Customer" as engagedCustomer
+actor "Support Community" as supportCommunity
+}
 
-(Create Forums) as createForums
-(Modify Forums) as modifyForums
-(Delete Forums) as deleteForums
+Package SystemActors {
+actor Admin
+actor System
+}
 
-(Create Blogpost) as createBlogpost
-(Modify Blogpost) as modifyBlogpost
-(Delete Blogpost) as deleteBlogpost
+Package Professionals {
+actor Dietitian
+actor Clinician
+}
+transactionCustomer --> (Create Profile)
+Admin --> (Create Profile)
+engagedCustomer --> (Preference personalization)
+engagedCustomer --> (Provide dietary needs)
+Admin --> (Create Forums)
+Admin --> (Modify Forums)
+transactionCustomer --> (Subscribe to Forum)
+engagedCustomer --> (Subscribe to Forum)
+engagedCustomer --> (Unsubscribe to Forum)
+Admin --> (Delete Forums)
 
-(Create Events) as createEvents
-(Create Classes) as createClasses
-(Modify Classes) as modifyClasses
-(Delete Classes) as deleteClasses
+Dietitian --> (Create Blogpost)
+Clinician --> (Create Blogpost)
+Dietitian --> (Modify Blogpost)
+Clinician --> (Modify Blogpost)
+Dietitian --> (Delete Blogpost)
+Clinician --> (Delete Blogpost)
 
-Dietitian -> (Provide generic advice)
-Dietitian -> (Access to customer medical information)
-Dietitian -> (Send message)
-Dietitian -> (Receive message)
-engagedCustomer -> (Send message)
-engagedCustomer -> (Receive message)
+Dietitian --> (Create Events)
+Clinician --> (Create Events)
+Dietitian --> (Create Classes)
+Clinician --> (Create Classes)
+Dietitian --> (Modify Classes)
+Clinician --> (Modify Classes)
+Dietitian --> (Delete Classes)
+Clinician --> (Delete Classes)
+engagedCustomer --> (Enroll to Events and classes)
+engagedCustomer --> (Cancel event or class enrolment)
 
-Clinics -> (Conduct test every 3 months)
-engagedCustomer -> (Take a test every 3 months)
-Clinics -> (Analyze results)
-
-Client -> createProfile
-
-engagedCustomer -> preferencePersonalization
-engagedCustomer -> provideDietaryNeeds
-
-System -> (Send onboarding email to Transactional Customer)
-
+Dietitian --> (Provide generic advice)
+Dietitian --> (Access to customer medical information)
+Clinician --> (Access to customer medical information)
+Dietitian --> (Send message)
+engagedCustomer --> (Send message)
+Dietitian --> (Receive message)
+engagedCustomer --> (Receive message)
+System --> (Send on-boarding email to Transactional Customer)
+Clinician --> (Trigger request to test every 3 months)
+Clinician --> (Analyze results )
+System --> (Tagging food to dietary choices)
+System --> (Rank dietary choices by Farmacy Food Fridge)
 @enduml

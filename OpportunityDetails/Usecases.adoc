@@ -4,7 +4,6 @@
 |===
 |Usecase |Actor |Module  |Goal Description
 
-
 |Create Profile |transactionCustomer, Admin | User-Profile-Management-Service |To convert transactionCustomer to engagedCustomer
 |Preference personalization |engagedCustomer |User-Profile-Management-Service | To share information with medical service providers and dietitians. And how much profile information they want to allow the community to see.
 |Provide dietary needs |engagedCustomer | |Goal Description
@@ -55,6 +54,10 @@
 |         | | Analytics        |System should extract keywords from notes saved from interaction between dietitian and customer
 |         | | Analytics        |System should extract keywords from clinical test results notes
 |===
+
+=== Usecase diagram
+
+image::../diagrams/farmacyFamily-usecases.png[]
 
 == User Stories
 
