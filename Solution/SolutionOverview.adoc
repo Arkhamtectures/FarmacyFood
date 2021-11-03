@@ -14,7 +14,7 @@ The proposed solution consists of multiple quanta addressing a specific need. Be
 . User's profile/preference management group
 .. Here we choose service-based architecture
 . Community Engagement group
-.. Here we choose Orchestrator driven service-based architecture
+.. Here we choose modularized monolith architecture
 . Analytics
 .. This group will be choreography based distributed architecture to support elasticity and scalability.
 . Content management for blogs and forums
