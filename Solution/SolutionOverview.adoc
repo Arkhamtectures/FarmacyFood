@@ -1,19 +1,34 @@
 = Solution Overview
 
+== Driving Principles
+
+. Ability to integrate with FarmacyFoods is critical
+. Modifiability is important as needs - both transactional and analytical will evolve
+
+== Style
+
+The existing system (Farmacy Foods) is a modularized monolith comprising multiple services. But here we plan to go with different approaches based on the quanta to model most components of Farmacy family i.e. Customer Profile, Community (Forums), Resources, and Events can be modeled as independent services. However, for analytics components, we propose it as a separate subsystem that leverages an event-driven architecture.
+
 The proposed solution consists of multiple quanta addressing a specific need. Below are the list that we identified fo the given scope.
 
-. User's profile/preference management group (Chosen service-based architecture)
-. Community Engagement group (Chosen Orchestrator driven service-based architecture)
+. User's profile/preference management group
+.. Here we choose service-based architecture
+. Community Engagement group
+.. Here we choose Orchestrator driven service-based architecture
 . Analytics
-.. This group will be completely choreography based distributed architecture to support elasticity and scalability.
-. Content management for blogs and forums (Chosen modularized monolith or a service-based architecture)
+.. This group will be choreography based distributed architecture to support elasticity and scalability.
+. Content management for blogs and forums
+.. Here we choose service-based architecture
 . Core or shared services
 
-[plantuml, format="svg", id="component-diagram"]
-----
-include::../diagrams/farmacyFamily-component-diagram.puml[formate=svg]
-----
 
+image:../diagrams/20211102_212432_Modules.png[]
+
+=== Components
+
+image:../diagrams/farmacyFamily-component-diagram.png[]
+
+=== Components Description
 
 . Content-Management-Group
 .. React based Content UI
@@ -58,3 +73,42 @@ This is service is to support the asynchronous communication which in our case c
 .. Data-grouping-Services
 .. Data-Collection-Services
 .. Analyzed-Data-Storage
+
+
+=== Analytics
+
+The data, interactions and insights of Farmacy Family are unique. Much of the development will be in building and deploying this module.
+
+*Customer Profile*:
+
+This is another core component. The Farmacy family profile will be a separate module that integrates with the Farmacy food profile in the ordering module.
+
+*Community*, *Resources* and *Events*: This modules can be built with little customization with off-the-shelf services or reference architectures
+
+*Additional Integration Points*
+
+. Farmacy Foods (Ordering)
+. eDietician
+. Clinics system
+
+=== Conceptual Model
+
+image:../diagrams/20211102_221606_Conceptual_Model.png[]
+
+_Knowledge level_** **Describes rules on how actors/entities interact with each other
+
+_Operational level_** **Describe the main actors/entities involved in main scenarios
+
+_Analytics level_** **Describes the interactions captured for analytics needs
+
+=== Analytics Components
+
+image:../diagrams/20211102_223941_Components.png[]
+
+=== The Analytics Subsystem
+
+image:../diagrams/20211102_224220_Analytics_Subsystem.png[]
+
+The driving principle here is extensibility and scalability. Any new modules in the system just need to publish events to EventBridge and be done. Processing, Extracting, Aggregating will then be handled by the analytics subsystem.
+
+AWS EventBridge and Kinesis complement each other. EventBridge provides event routing while Kinesis adds batching, partitioning and back-pressure.The events will be batched and processed by a lambda function and populate the corresponding analytics tables in Amazon Redshift.
