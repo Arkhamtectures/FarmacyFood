@@ -44,11 +44,10 @@ Thus, the overall goal of Farmacy Family is to connect, gather, analyze, and com
 * Farmacy Family has relationships with third party providers (clinics, doctors, etc) that have access to more analytical data to improve engagement (for example, regional dietary observations).
 * Add Farmacy Family user interface to existing Foods interface, which is currently a Reactive monolith. Create a holistic UX for both food and Farmacy Family to support engagement model.
 
+== Opportunity Analysis
+
 include::OpportunityDetails/Readme.adoc[leveloffset=+2]
 
-[plantuml, format="svg", id="usecases"]
-----
-include::diagrams/farmacyFamily-usecases.puml[formate=svg]
-----
+== Proposed Solution
 
 include::Solution/Readme.adoc[leveloffset=+2]

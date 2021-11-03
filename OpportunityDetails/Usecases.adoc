@@ -1,4 +1,4 @@
-= Usecases
+== Usecases
 
 
 |===
@@ -55,3 +55,7 @@
 |         | | Analytics        |System should extract keywords from notes saved from interaction between dietitian and customer
 |         | | Analytics        |System should extract keywords from clinical test results notes
 |===
+
+== User Stories
+
+image::../diagrams/Transaction-to-Engagement-Customer.png[]
